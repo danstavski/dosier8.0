@@ -1,0 +1,81 @@
+@use "../abstract/adaptive-mixins" as *;
+
+.description-movies {
+  padding: 0;
+  display: flex;
+  justify-content: start;
+  position: relative;
+  background-color: rgb(13, 13, 13);
+  &__wrapper {
+    background-color: #232323;
+    background: linear-gradient(
+      45deg,
+      rgb(35, 35, 35) 27%,
+      rgb(21, 21, 21) 62%
+    );
+    padding: 5rem 45% 6rem 8rem;
+    clip-path: polygon(0 0, 45% 0, 100% 100%, 0% 100%);
+    @include adaptive(tab-port) {
+      clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+      padding: 2rem 40% 2rem 6rem;
+    }
+
+    @include adaptive(phone) {
+      padding: 2rem 35% 2rem 3rem;
+      scroll-margin-top: 2rem;
+    }
+  }
+
+  &__h2 {
+    margin-bottom: 4rem;
+    @include adaptive(tab-port) {
+      justify-self: start;
+      text-align: start;
+    }
+
+    @include adaptive(phone) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__content {
+    z-index: 3;
+    position: relative;
+    & > *:not(:last-child):not(:nth-child(2)) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .balls-1 {
+    top: 10%;
+    left: 65%;
+  }
+
+  .balls-2 {
+    top: 67%;
+    left: 30%;
+    @include adaptive(tab-land) {
+      top: 75%;
+    }
+
+    @include adaptive(tab-port) {
+      top: 80%;
+      left: 45%;
+    }
+  }
+
+  .balls-3 {
+    top: 52%;
+    left: 86%;
+
+    @include adaptive(tab-port) {
+      left: 75%;
+    }
+  }
+}
+
+@include adaptive(phone) {
+  .description-movies__h3 {
+    margin-bottom: 2rem;
+  }
+}

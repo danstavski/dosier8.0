@@ -1,0 +1,41 @@
+@use "../abstract/adaptive-mixins" as *;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #101316;
+}
+
+.main-container {
+  position: relative;
+  & > * {
+    padding: 0 8rem;
+    transition: 1s all;
+    scroll-margin-top: 8rem;
+    @include adaptive(tab-port) {
+      padding: 0 5rem;
+    }
+
+    @include adaptive(phone) {
+      padding: 0 3rem;
+      // scroll-margin-top: 2rem;
+    }
+  }
+
+  & > *.blur {
+    filter: blur(7px);
+  }
+}
+
+.main-container.blur {
+  filter: blur(7px);
+}

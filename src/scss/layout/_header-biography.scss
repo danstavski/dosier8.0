@@ -1,0 +1,107 @@
+@use "../abstract/adaptive-mixins" as *;
+.biography {
+  background: linear-gradient(90deg, rgb(24, 14, 4) 15%, rgb(16, 3, 3));
+  clip-path: polygon(0 0, 100% 0%, 85% 100%, 0% 100%);
+  margin-top: 8rem;
+  padding-bottom: 3rem;
+  padding-top: 5rem;
+  min-height: calc(100vh - 8rem);
+  display: flex;
+  align-items: center;
+  @include adaptive(tab-land) {
+    clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
+  }
+
+  @include adaptive(tab-port) {
+    height: calc(100vh - 6rem);
+    margin-top: 6rem;
+  }
+
+  @include adaptive(phone) {
+    min-height: calc(100vh - 5rem);
+    margin-top: 5rem;
+  }
+  &__wrapper {
+    padding-top: 6rem;
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    justify-content: space-between;
+    gap: 10rem 10%;
+    padding-bottom: 3rem;
+    margin: 0 auto;
+    @include adaptive(tab-land) {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding-top: 0;
+      gap: 2rem 0;
+    }
+  }
+
+  &__ball {
+    position: absolute;
+    width: 100rem;
+    height: 100rem;
+    border-radius: 50rem;
+    background: rgb(29, 29, 29);
+    border: 2px rgb(141, 141, 141) solid;
+    left: -10%;
+    top: -40%;
+    opacity: 0.4;
+    z-index: 1;
+    @include adaptive(tab-land) {
+      width: 80rem;
+      height: 80rem;
+      left: -10%;
+      top: -10%;
+    }
+
+    @include adaptive(tab-port) {
+      width: 55rem;
+      height: 55rem;
+      left: -15%;
+      top: -10%;
+    }
+
+    @include adaptive(phone) {
+      left: -40%;
+      top: -5%;
+      width: 45rem;
+      height: 40rem;
+    }
+  }
+
+  &__h1 {
+    z-index: 2;
+    position: relative;
+    animation: header-biography 2s;
+    @include adaptive(tab-port) {
+      font-size: 5.5rem !important;
+    }
+  }
+
+  &__h2 {
+    margin-bottom: 4rem;
+    @include adaptive(tab-port) {
+      text-align: start;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__content {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+  }
+
+  &__paragraph {
+    margin-bottom: 3rem;
+  }
+
+  @include adaptive(tab-port) {
+    margin-bottom: 2rem;
+  }
+}

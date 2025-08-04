@@ -1,0 +1,154 @@
+@use "../abstract/variables" as *;
+@use "../abstract/adaptive-mixins" as *;
+
+.navigation {
+  background-color: #0a0a0a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.1px solid rgb(74, 74, 74);
+  z-index: 100;
+  @include adaptive(tab-port) {
+    align-items: center;
+    height: 6rem;
+  }
+
+  @include adaptive(phone) {
+    height: 5rem;
+  }
+
+  &__logo {
+    width: 8rem;
+    @include adaptive(tab-port) {
+      width: 6rem;
+      height: 6rem;
+      display: flex;
+      align-items: center;
+    }
+    @include adaptive(phone) {
+      height: 5rem;
+      width: 5rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    position: relative;
+    @include adaptive(tab-port) {
+      display: none;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    font-family: Thicker, sans-serif;
+    &:not(:last-child) {
+      margin-right: 5rem;
+    }
+    &:not(:first-child) .navigation__links:hover {
+      color: rgb(131, 130, 130);
+      transform: scale(1.1) translateY(-0.5rem);
+    }
+
+    &:not(:first-child) .navigation__links:active {
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  &__links {
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+    color: $color-paragraph;
+    &_modal {
+      font-size: 2rem;
+    }
+    &_movies {
+      &:hover {
+        color: rgb(131, 130, 130);
+        transform: scale(1.1) translateY(-0.5rem);
+      }
+    }
+  }
+
+  &__modal-box {
+    position: fixed;
+    top: 0rem;
+    right: 46rem;
+    background-color: #353535;
+    z-index: 101;
+    border-radius: 1rem;
+    padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all;
+    @include adaptive(tab-port) {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__modal-box-list {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    & > * {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__modal-box.open {
+    top: 8rem;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__links_modal {
+    all: unset;
+    transition: 0.3s all;
+    &:hover {
+      color: grey;
+    }
+  }
+
+  &__modal-box-btn {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    z-index: 200;
+    position: absolute;
+    top: 0.4rem;
+    left: 0;
+  }
+
+  &__svg {
+    transition: all 0.2s;
+    &:hover {
+      fill: rgb(29, 20, 20);
+    }
+
+    &:active {
+      fill: rgb(111, 13, 13);
+    }
+  }
+}
+
+#navigation__links_not-animation {
+  &:hover {
+    transform: none;
+  }
+}
+
+#navigation__links-main-animation {
+  transition: 0.3s all;
+  &:hover {
+    color: rgb(131, 130, 130);
+    transform: scale(1.1) translateY(-0.5rem);
+  }
+}

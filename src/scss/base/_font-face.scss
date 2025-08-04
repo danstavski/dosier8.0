@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Vokiar";
+  src: url(../../fonts/Vokiar.woff2) format("woff2"),
+    url(../../fonts/Vokiar.woff) format("woff"),
+    url(../../fonts/Vokiar.otf) format("opentype");
+}
+
+// Для заголовков
+@font-face {
+  font-family: "Faberge";
+  src: url(../../fonts/Faberge-Regular.woff2) format("woff2"),
+    url(../../fonts/Faberge-Regular.woff) format("woff"),
+    url(../../fonts/Faberge-Regular.otf) format("opentype");
+}
+
+// Для более параграфов(описания)
+
+@font-face {
+  font-family: "Thicker";
+  src: url(../../fonts/DolomanPavljenko.woff2) format("woff2"),
+    url(../../fonts/DolomanPavljenko.woff) format("woff"),
+    url(../../fonts/DolomanPavljenko.otf) format("opentype");
+}

@@ -1,0 +1,37 @@
+@use "../abstract/variables" as *;
+@use "../abstract/adaptive-mixins" as *;
+
+.acquaintance {
+  &__skills-description {
+    transition: 0.3s all;
+    padding: 1rem;
+    border-radius: 2rem;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    &:hover {
+      background-color: rgb(57, 57, 57);
+    }
+
+    &__icon {
+      height: 4rem;
+      margin-right: 3rem;
+    }
+  }
+
+  &__h3-skills {
+    display: inline-block;
+    color: $color-title;
+    margin-left: 2rem;
+    @include adaptive(tab-land) {
+      margin-left: 1rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,20 @@
+@use "../abstract/adaptive-mixins" as *;
+
+.description-movies__balls {
+  width: 15rem;
+  height: 15rem;
+  background: linear-gradient(45deg, rgb(35, 35, 35) 49%, rgb(21, 21, 21) 64%);
+  border-radius: 7rem;
+  position: absolute;
+  border-left: 1px rgb(181, 181, 181) solid;
+  z-index: 2;
+  @include adaptive(tab-land) {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  @include adaptive(tab-port) {
+    width: 8rem;
+    height: 8rem;
+  }
+}

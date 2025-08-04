@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мое досье 8.0 - Любимая музыка</title>
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="../../icons/favicons/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="../../icons/favicons/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="../../icons/favicons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../../icons/favicons/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="../../icons/favicons/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../../icons/favicons/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../../icons/favicons/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="../../icons/favicons/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../icons/favicons/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="../../icons/favicons/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../icons/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="../../icons/favicons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../icons/favicons/favicon-16x16.png"
+    />
+
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/style.min.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <nav class="navigation">
+        <img
+          src="../../icons/Логотип-Ставского-Даниила.png"
+          alt="Логотип сайта Ставского Даниила"
+          class="navigation__logo"
+        />
+        <div class="navigation__wrapper">
+          <ul class="navigation__list">
+            <li
+              id="navigation__links-main-animation"
+              class="navigation__item text"
+            >
+              <a
+                href="../../index.html"
+                class="navigation__links navigation__links_modal text"
+              >
+                Главное
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a
+                href="../love-movies/movies.html"
+                class="navigation__links text"
+                >Любимые фильмы</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a
+                id="navigation__links_not-animation"
+                href="#"
+                class="navigation__links text"
+                >Любимая музыка</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a
+                href="../biography/biography.html"
+                class="navigation__links text"
+                >Биография</a
+              >
+            </li>
+          </ul>
+        </div>
+        <button class="burger-btn">
+          <span class="burger-btn__span"></span>
+        </button>
+      </nav>
+      <div style="padding: 3rem 0" class="nav-tab">
+        <ul class="nav-tab__list">
+          <li class="nav-tab__item">
+            <a
+              style="text-decoration: none"
+              href="../../index.html"
+              class="text_nav-tab"
+              >Главное</a
+            >
+          </li>
+          <li class="nav-tab__item">
+            <a
+              href="../love-movies/movies.html"
+              class="nav-tab__links text text_nav-tab"
+              >Любимые фильмы</a
+            >
+          </li>
+          <li class="nav-tab__item">
+            <a
+              href="../love-music/music.html"
+              class="nav-tab__links text text_nav-tab"
+              >Любимая музыка</a
+            >
+          </li>
+          <li class="nav-tab__item">
+            <a
+              href="../biography/biography.html"
+              class="nav-tab__links text text_nav-tab"
+              >Биография</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <header class="header-video">
+        <div class="header-video__wrapper">
+          <h1 class="header-video__h1 h1">Моя любимая <br />музыка</h1>
+          <video
+            class="header-video__video"
+            muted
+            autoplay
+            loop
+            playsinline
+            preload="auto"
+            webkit-playsinline
+          >
+            <source src="../../videos/love-music.webm" type="video/webm" />
+            <source src="../../videos/love-music.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </header>
+
+      <section class="love-music">
+        <div class="love-music__wrapper">
+          <img
+            src="../../img/top-yandex.webp"
+            alt="Итоги яндекс музыки Ставского Даниила"
+            class="love-music__img img-1"
+          />
+
+          <img
+            src="../../img/vk-top.webp"
+            alt="Итоги яндекс музыки Ставского Даниила"
+            class="love-music__img img-2"
+          />
+          <div class="love-music__content">
+            <h2 class="love-music__h2 title">О музыке:</h2>
+            <span class="acquaintance__span small-text"
+              >By <span>Daniil Stavskiy</span> | 22.07.2025
+            </span>
+            <p class="love-music__paragraph paragraph">
+              Я люблю многие жанры, и какого то прям любимого нет. Но в данный
+              момент больше всего я слушаю русский рэп, и также чуть реже поп.
+              Дам вам ссылку на
+              <a
+                target="_blank"
+                href="https://music.yandex.ru/users/yamusic-my2024/playlists/4099472?utm_medium=share_link_tg"
+                class="love-music__Playlist"
+                >"мой плейлист 2024"</a
+              >. Ниже также представлю уже подробный топ моих артистов по версии
+              "Яндекс Музыки" за 2024 год.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="top-singers">
+        <div class="technologies__wrapper">
+          <h2 class="technologies__h2 title">Артисты</h2>
+          <div class="technologies__example">
+            <div class="technologies__content" id="top-singers-cards__aarne">
+              <h3 class="technologies__h3 title-h3">1. Aarne</h3>
+              <p class="technologies__paragraph text">
+                Aarne — Саунд-продюсер и рэпер, прославился в новой волне
+                русского хип-хопа. Создаёт модные биты и работает с топовыми
+                артистами индустрии. Сделал 2 альбома ААА и ААА2 с топовыми
+                реперами. Сам почти не читает в треках
+              </p>
+            </div>
+
+            <div
+              class="technologies__content"
+              id="top-singers-cards__bigbabytape"
+            >
+              <h3 class="technologies__h3 title-h3">2. BigBabyTape</h3>
+              <p class="technologies__paragraph text">
+                Big Baby Tape — Рэпер и битмейкер из Москвы. Прославился
+                трэп-звучанием, западным вайбом, плотными рифмами. Его стиль
+                сильно повлиял на русскую сцену. Его альбомы собирают огромное
+                кол-во прослушиваний
+              </p>
+            </div>
+
+            <div class="technologies__content" id="top-singers-cards__jony">
+              <h3 class="technologies__h3 title-h3">3. JONY</h3>
+              <p class="technologies__paragraph text">
+                JONY — Поп-исполнитель с азербайджанскими корнями. Известен
+                романтичными треками, мелодичным вокалом, искренними текстами.
+                Один из лидеров русскоязычного поп-сегмента. Был многократным
+                лидером моих топов
+              </p>
+            </div>
+
+            <div class="technologies__content" id="top-singers-cards__krid">
+              <h3 class="technologies__h3 title-h3">4. Егор Крид</h3>
+              <p class="technologies__paragraph text">
+                Егор Крид — Поп-звезда с огромной фан-базой. Стал известен
+                благодаря лирике, харизме и участию в лейбле Black Star. Сейчас
+                работает самостоятельно. Всегда следит за трендами в музыке и
+                делает колабы с новыми звездами
+              </p>
+            </div>
+
+            <div class="technologies__content" id="top-singers-cards__buda">
+              <h3 class="technologies__h3 title-h3">5. OG buda</h3>
+              <p class="technologies__paragraph text">
+                OG Buda — Один из ключевых артистов новой школы. Известен
+                атмосферным трэп-звучанием. Отличается большим колличеством
+                музыки, которую делает довольно быстро. Он также один из лидеров
+                русского рэпа как BigBabyTape и д.р.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <div class="footer__nav">
+            <img
+              src="../../icons/Логотип-Ставского-Даниила.png"
+              alt="Логотип Ставского Даниила"
+              class="footer__logo"
+            />
+            <div class="footer__content">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="../../index.html" class="footer__links text_white"
+                    >Главное</a
+                  >
+                </li>
+                <li class="footer__item">
+                  <a
+                    href="../love-movies/movies.html"
+                    class="footer__links text_white"
+                    >Любимые фильмы</a
+                  >
+                </li>
+                <li class="footer__item">
+                  <a
+                    href="../biography/biography.html"
+                    class="footer__links text_white"
+                    >Биография</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__links-information">
+            <div class="footer__copyright">
+              <div class="footer__gmail">
+                <div class="footer__gmail-wrapper">
+                  <a
+                    target="_blank"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=stavskijdaniil1@gmail.com"
+                    class="footer__email"
+                    ><img
+                      src="../../icons/icons8-gmail-50.png"
+                      alt="Почта Даниила Ставского"
+                      class="footer__gmail-img"
+                  /></a>
+                  <span>stavskijdaniil1@gmail.com</span>
+                </div>
+                <span class="footer__star"
+                  >* - Продукт Meta, признана экстремисткой организацией на
+                  территории РФ</span
+                >
+              </div>
+              <div class="footer__information">
+                <span>
+                  &copy Ставский Даниил Зуфарович. Все права защищены.</span
+                >
+              </div>
+            </div>
+
+            <div target="_blank" class="footer__links-media">
+              <a href="https://t.me/danstavski" class="footer__tg">
+                <img
+                  src="../../icons/icons8-telegram-100 (1).png"
+                  alt="Логотип тегеграмма Ставского Даниила"
+                  class="footer__img-media"
+                />
+              </a>
+
+              <a
+                target="_blank"
+                href="https://www.tiktok.com/@danstavski_"
+                class="footer__tiktok"
+              >
+                <img
+                  src="../../icons/icons8-tiktok-100 (4).png"
+                  alt="Логотип тик тока Ставского Даниила"
+                  class="footer__img-media"
+                />
+              </a>
+
+              <a
+                target="_blank"
+                href="https://www.instagram.com/danstavski_/"
+                class="footer__inst"
+              >
+                <div class="inst-wrapper">
+                  <img
+                    src="../../icons/icons8-instagram-100 (1).png"
+                    alt="Логотип инстаграмма Ставского Даниила"
+                    class="footer__img-media"
+                  />
+                  <sup>*</sup>
+                </div>
+              </a>
+
+              <a
+                target="_blank"
+                href="https://vk.com/stavskiy2005"
+                class="footer__vk"
+              >
+                <img
+                  src="../../icons/icons8-vk-100 (2).png"
+                  alt="Логотип Вконтакте Ставского Даниила"
+                  class="footer__img-media"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../../js/music-script.min.js"></script>
+  </body>
+</html>

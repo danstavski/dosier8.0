@@ -1,0 +1,39 @@
+@use "../abstract/adaptive-mixins" as *;
+.header-video {
+  padding: 0 !important;
+  &__wrapper {
+    width: 100%;
+    margin-top: 8rem;
+    height: calc(100vh - 8rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-left: 8rem;
+    text-align: center;
+    @include adaptive(tab-land) {
+      margin-top: 6rem;
+      height: calc(100vh - 6rem);
+      padding: 0 5rem;
+    }
+
+    @include adaptive(phone) {
+      margin-top: 5rem;
+      height: calc(100vh - 5rem);
+      padding: 0 3rem;
+    }
+  }
+  &__video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+  &__h1 {
+    z-index: 5;
+    animation: header-movies 1.5s;
+  }
+}

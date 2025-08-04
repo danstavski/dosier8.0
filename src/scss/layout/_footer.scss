@@ -1,0 +1,145 @@
+@use "../abstract/variables" as *;
+@use "../abstract/adaptive-mixins" as *;
+
+.footer {
+  background-color: rgb(21, 19, 19);
+  padding-top: 1rem !important;
+  padding-bottom: 1.5rem !important;
+  border-top: 1px solid rgb(59, 59, 59);
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+
+  &__links-information {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+
+  &__links {
+    text-decoration: none;
+    transition: 0.3s all;
+    display: flex;
+
+    &:hover {
+      color: rgb(131, 130, 130);
+    }
+  }
+
+  &__links-media {
+    display: flex;
+    align-items: end;
+    & > *:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+
+  &__logo {
+    height: 6rem;
+    @include adaptive(tab-port) {
+      height: 4rem;
+    }
+
+    @include adaptive(tab-land) {
+      height: 3rem;
+    }
+  }
+
+  &__img-media {
+    height: 2.5rem;
+    @include adaptive(tab-port) {
+      height: 2rem;
+    }
+
+    @include adaptive(phone) {
+      height: 1.5rem;
+    }
+  }
+
+  &__vk,
+  &__tg,
+  &__tiktok,
+  &__inst {
+    text-decoration: none;
+  }
+
+  &__gmail {
+    margin-bottom: 1rem;
+  }
+
+  &__gmail-img {
+    height: 3rem;
+    margin-right: 1rem;
+    @include adaptive(tab-port) {
+      height: 2rem;
+    }
+
+    @include adaptive(phone) {
+      height: 1.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__gmail-wrapper {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__copyright {
+    color: rgb(94, 94, 94);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Faberge, sans-serif;
+    @include adaptive(tab-port) {
+      font-size: 0.8rem;
+    }
+    @include adaptive(phone) {
+      font-size: 0.6rem;
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__information {
+    @include adaptive(tab-port) {
+      font-size: 0.8rem;
+    }
+    @include adaptive(phone) {
+      font-size: 0.6rem;
+    }
+  }
+}
+
+.inst-wrapper {
+  position: relative;
+}
+
+sup {
+  color: rgb(122, 122, 122);
+  font-size: 0.85rem;
+  position: absolute;
+  top: 0.1rem;
+  @include adaptive(tab-port) {
+    top: -0.1rem;
+  }
+
+  @include adaptive(phone) {
+    font-size: 0.8rem;
+    top: -0.1rem;
+    font-size: 0.7rem;
+  }
+}

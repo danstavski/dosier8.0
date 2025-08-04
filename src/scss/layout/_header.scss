@@ -1,0 +1,63 @@
+@use "../abstract/variables" as *;
+@use "../abstract/adaptive-mixins" as *;
+
+.header {
+  margin-top: 8rem;
+  @include adaptive(tab-port) {
+    margin-top: 6rem;
+  }
+  @include adaptive(phone) {
+    margin-top: 5rem;
+  }
+
+  height: calc(100vh - 8rem);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background: linear-gradient(
+      45deg,
+      rgba(32, 32, 32, 0.4) 20%,
+      rgba(65, 65, 65, 0.4)
+    ),
+    url(../../img/header-bg-photo.webp) no-repeat;
+  background-position: 50% 80%;
+  background-size: cover;
+  animation: Header-Home-animation 1s;
+  @include adaptive(tab-port) {
+    height: calc(100vh - 6rem);
+  }
+
+  @include adaptive(phone) {
+    height: calc(100vh - 5rem);
+  }
+
+  &__hello {
+    font-size: 3rem;
+    color: $color-main-title;
+    font-family: Thicker, sans-serif;
+    animation: title-Home-animation 2.5s;
+    @include adaptive(tab-land) {
+      font-size: 2.3rem;
+    }
+
+    @include adaptive(tab-port) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    gap: 4rem;
+    @include adaptive(tab-land) {
+      gap: 2rem;
+    }
+  }
+
+  &__title {
+    animation: title-Home-animation 2s;
+    opacity: 1;
+    & > * {
+      color: rgb(252, 155, 155);
+    }
+  }
+}

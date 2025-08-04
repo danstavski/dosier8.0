@@ -1,0 +1,75 @@
+.top-singers {
+  padding-top: 4rem;
+  padding-bottom: 7rem;
+  background: url(../../img/bg-top-singer.webp) repeat;
+}
+
+#top-singers-cards {
+  &__aarne {
+    background: linear-gradient(
+        45deg,
+        rgba(54, 54, 54, 0.75) 17%,
+        rgba(0, 0, 0, 0.75) 86%
+      ),
+      url(../../img/aarne.webp) center/cover no-repeat;
+    &:hover {
+      border: 2px solid rgb(169, 169, 169);
+      transform: translateY(-1rem);
+    }
+  }
+
+  &__bigbabytape {
+    background: linear-gradient(
+        45deg,
+        rgba(54, 54, 54, 0.75) 17%,
+        rgba(0, 0, 0, 0.75) 86%
+      ),
+      url(../../img/bigbabytape.webp) center/cover no-repeat;
+
+    &:hover {
+      border: 2px solid rgb(169, 169, 169);
+      transform: translateY(-1rem);
+    }
+  }
+
+  &__jony {
+    background: linear-gradient(
+        45deg,
+        rgba(54, 54, 54, 0.75) 17%,
+        rgba(0, 0, 0, 0.75) 86%
+      ),
+      url(../../img/jony.webp) center/cover no-repeat;
+    &:hover {
+      border: 2px solid rgb(169, 169, 169);
+      transform: translateY(-1rem);
+    }
+  }
+
+  &__krid {
+    background: linear-gradient(
+        45deg,
+        rgba(54, 54, 54, 0.75) 17%,
+        rgba(0, 0, 0, 0.75) 86%
+      ),
+      url(../../img/krid.webp) center/cover no-repeat;
+
+    &:hover {
+      border: 2px solid rgb(169, 169, 169);
+      transform: translateY(-1rem);
+    }
+  }
+
+  &__buda {
+    background: linear-gradient(
+        45deg,
+        rgba(54, 54, 54, 0.75) 17%,
+        rgba(0, 0, 0, 0.75) 86%
+      ),
+      url(../..//img/og-buda.webp) center/cover no-repeat;
+
+    &:hover {
+      border: 2px solid rgb(169, 169, 169);
+      transform: translateY(-1rem);
+    }
+  }
+}
